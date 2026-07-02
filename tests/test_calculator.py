@@ -11,3 +11,15 @@ def test_subtract():
 
 def test_multiply():
     assert multiply(4, 3) == 12
+
+
+def test_divide():
+    assert divide(6, 3) == 2
+
+
+def test_divide_by_zero_raises():
+    try:
+        divide(1, 0)
+        assert False, "esperava ValueError"
+    except ValueError:
+        pass
